@@ -1,0 +1,47 @@
+:root{
+	--brand-gold:#d4a24a;
+	--dark-bg:#0b0b0b;
+	--muted:#8a8a8a;
+}
+
+body{
+	font-family: 'Poppins', sans-serif;
+	color:#222;
+}
+
+.navbar-brand .brand-title{font-weight:700;font-family:'Playfair Display', serif;color:#fff}
+.navbar{background:transparent}
+
+.hero{
+	background-image: url('/static/images/1-Home.png');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	padding: 6rem 0;
+}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,4,4,0.65),rgba(4,4,4,0.85));}
+.hero .container{position:relative;z-index:2}
+.hero-title{font-family:'Playfair Display',serif;font-weight:700;color:#fff}
+.hero-sub{color:rgba(255,255,255,0.8)}
+
+.booking-card{background:rgba(10,10,10,0.6);border:none;color:#fff}
+.booking-card .form-control,.booking-card .form-select{background:rgba(255,255,255,0.04);border:none;color:#fff}
+.booking-card .btn{background:var(--brand-gold);border:none;color:#111}
+
+.feature{min-height:80px}
+.food-card{border:none;border-radius:12px;overflow:hidden}
+.food-card img{height:180px;object-fit:cover}
+.food-card .card-body{background:#fff}
+.food-card .card-title{font-weight:600}
+.food-card .price{font-weight:700;color:var(--brand-gold);margin-top:8px}
+
+.cta{background:linear-gradient(90deg,#0b0b0b,#141212)}
+
+.footer{background:#070707}
+.footer h5{color:var(--brand-gold)}
+
+/* Responsive tweaks */
+@media (max-width:768px){
+	.hero{padding:3rem 0}
+	.hero-title{font-size:1.8rem}
+}
