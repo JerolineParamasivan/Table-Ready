@@ -1,47 +1,73 @@
 :root{
-	--brand-gold:#d4a24a;
-	--dark-bg:#0b0b0b;
-	--muted:#8a8a8a;
+	--brand-gold: #d4a24a;
+	--brand-gold-dark: #b9852f;
+	--bg-dark: #0b0b0b;
+	--muted: #8a8a8a;
+	--card-radius: 14px;
 }
 
 body{
 	font-family: 'Poppins', sans-serif;
 	color:#222;
+	background: #fff;
 }
 
+.topbar{background: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.85));}
 .navbar-brand .brand-title{font-weight:700;font-family:'Playfair Display', serif;color:#fff}
-.navbar{background:transparent}
+.brand-icon{background:var(--brand-gold);color:#111;border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-weight:700}
 
-.hero{
-	background-image: url('/static/images/1-Home.png');
+.hero-wrap{
+	background-image: url('/static/images/2-Menu.jpg.jpeg');
 	background-size: cover;
 	background-position: center;
 	position: relative;
-	padding: 6rem 0;
+	padding: 64px;
+	border-radius: 28px 28px 12px 12px;
+	overflow: hidden;
 }
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,4,4,0.65),rgba(4,4,4,0.85));}
-.hero .container{position:relative;z-index:2}
-.hero-title{font-family:'Playfair Display',serif;font-weight:700;color:#fff}
-.hero-sub{color:rgba(255,255,255,0.8)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,0.7),rgba(8,8,8,0.85));}
+.hero-wrap .row{position:relative;z-index:2}
+.hero-title{font-family:'Playfair Display',serif;font-weight:800;color:#fff;font-size:48px;line-height:1.05}
+.hero-sub{color:rgba(255,255,255,0.9);max-width:520px}
 
-.booking-card{background:rgba(10,10,10,0.6);border:none;color:#fff}
-.booking-card .form-control,.booking-card .form-select{background:rgba(255,255,255,0.04);border:none;color:#fff}
+.booking-card{background:rgba(255,255,255,0.06);backdrop-filter:blur(6px);border-radius:12px;border:1px solid rgba(255,255,255,0.06);color:#fff}
+.booking-card .form-control,.booking-card .form-select{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);color:#fff}
 .booking-card .btn{background:var(--brand-gold);border:none;color:#111}
 
-.feature{min-height:80px}
-.food-card{border:none;border-radius:12px;overflow:hidden}
-.food-card img{height:180px;object-fit:cover}
-.food-card .card-body{background:#fff}
-.food-card .card-title{font-weight:600}
+.category-nav{transform:translateY(-26px);padding:18px}
+.category-nav .nav-link{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 18px;border-radius:12px;color:#6b6b6b;border:1px solid transparent;min-width:110px}
+.category-nav .nav-link .icon{font-size:20px;margin-bottom:6px}
+.category-nav .nav-link.active{background:linear-gradient(180deg, #fff,#fff);border:1px solid rgba(212,162,74,0.12);box-shadow:0 6px 18px rgba(20,20,20,0.06);color:var(--brand-gold)}
+
+.features .feature{background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(20,20,20,0.04)}
+
+.food-card{border:none;border-radius:var(--card-radius);overflow:hidden;box-shadow:0 8px 18px rgba(15,15,15,0.06)}
+.food-card img{height:160px;object-fit:cover}
+.food-card .card-body{background:#fff;padding:16px}
+.food-card .card-title{font-weight:700;font-size:15px}
+.food-card p{font-size:13px;color:#666;margin:6px 0}
 .food-card .price{font-weight:700;color:var(--brand-gold);margin-top:8px}
+.food-badge{position:absolute;right:12px;top:12px;background:#fff;padding:6px;border-radius:8px;font-size:12px;border:1px solid rgba(0,0,0,0.06)}
 
-.cta{background:linear-gradient(90deg,#0b0b0b,#141212)}
+.section-heading{font-family:'Playfair Display',serif;font-weight:700;margin-bottom:18px}
+.section-sub small{color:#8b8b8b}
 
-.footer{background:#070707}
+.cta{background:#0b0b0b;padding:28px;border-radius:12px;margin-top:28px;color:#fff}
+.cta .btn{background:var(--brand-gold);border:none;color:#111}
+
+.footer{background:#070707;padding:48px 0;border-radius:0 0 28px 28px}
 .footer h5{color:var(--brand-gold)}
+.footer .list-unstyled li{color:#9b9b9b;margin-bottom:6px}
+
+.scroll-top{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:linear-gradient(180deg,var(--brand-gold),var(--brand-gold-dark));display:flex;align-items:center;justify-content:center;color:#111;box-shadow:0 8px 20px rgba(0,0,0,0.25);}
 
 /* Responsive tweaks */
-@media (max-width:768px){
-	.hero{padding:3rem 0}
-	.hero-title{font-size:1.8rem}
+@media (max-width:992px){
+	.hero-wrap{padding:32px}
+	.hero-title{font-size:32px}
+}
+@media (max-width:576px){
+	.hero-wrap{padding:20px}
+	.category-nav .nav-link{min-width:80px;padding:8px}
+	.food-card img{height:140px}
 }

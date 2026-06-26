@@ -20,7 +20,7 @@
 	<body>
 
 		<!-- Header / Navbar -->
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+		<nav class="navbar navbar-expand-lg navbar-dark topbar py-3">
 			<div class="container">
 				<a class="navbar-brand d-flex align-items-center" href="#">
 					<div class="brand-icon">🍽️</div>
@@ -46,9 +46,10 @@
 		</nav>
 
 		<!-- Hero -->
-		<header class="hero bg-dark text-white">
-			<div class="hero-overlay"></div>
-			<div class="container py-6">
+		header class="hero text-white">
+			<div class="hero-wrap container shadow-lg rounded-top-lg overflow-hidden">
+				<div class="hero-overlay"></div>
+				<div class="row g-0 align-items-center">
 				<div class="row align-items-center">
 					<div class="col-lg-7">
 						<span class="badge bg-warning text-dark mb-3">WELCOME TO TABLEREADY</span>
@@ -98,6 +99,23 @@
 			</div>
 		</header>
 
+		<!-- Categories navigation -->
+		<section class="container mt-n4">
+			<div class="category-nav bg-white rounded p-3 shadow-sm">
+				<ul class="nav justify-content-center gap-3">
+					<li class="nav-item">
+						<a class="nav-link active" data-filter="all" href="#"> <span class="icon">🍽️</span><div>All Menu</div></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" data-filter="starters" href="#"> <span class="icon">🥗</span><div>Starters</div></a></li>
+					<li class="nav-item"><a class="nav-link" data-filter="main" href="#"> <span class="icon">🍖</span><div>Main Course</div></a></li>
+					<li class="nav-item"><a class="nav-link" data-filter="pasta" href="#"> <span class="icon">🍝</span><div>Pasta</div></a></li>
+					<li class="nav-item"><a class="nav-link" data-filter="pizza" href="#"> <span class="icon">🍕</span><div>Pizza</div></a></li>
+					<li class="nav-item"><a class="nav-link" data-filter="dessert" href="#"> <span class="icon">🍰</span><div>Desserts</div></a></li>
+					<li class="nav-item"><a class="nav-link" data-filter="beverages" href="#"> <span class="icon">🥤</span><div>Beverages</div></a></li>
+				</ul>
+			</div>
+		</section>
+
 		<!-- Features -->
 		<section class="container mt-5 features">
 			<div class="row g-4">
@@ -116,59 +134,170 @@
 			</div>
 		</section>
 
-		<!-- Popular Dishes -->
+		<!-- Menu: categorized sections -->
 		<section id="menu" class="container my-5">
 			<div class="text-center mb-4">
-				<small class="text-muted">OUR SPECIALTIES</small>
-				<h2 class="mt-2">Popular Dishes</h2>
-				<p class="text-muted">Handpicked chef's specials that our customers love the most.</p>
+				<small class="text-muted">OUR MENU</small>
+				<h2 class="mt-2 section-heading">A Culinary Experience Like No Other</h2>
+				<p class="text-muted section-sub">Explore a wide range of dishes crafted with the finest ingredients and a passion for perfection.</p>
 			</div>
 
-			<div class="row g-4">
+			<!-- Starters -->
+			<div class="d-flex justify-content-between align-items-center mb-3">
+				<h4 class="section-heading">Starters</h4>
+				<a class="btn btn-sm btn-outline-secondary" href="#">View All →</a>
+			</div>
+			<div class="row g-4 mb-4" data-cat="starters">
 				<div class="col-md-3">
-					<div class="card food-card">
-						<img src="/static/images/1-Home.png" class="card-img-top" alt="pasta">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹199</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="Bruschetta">
 						<div class="card-body">
-							<h6 class="card-title">Creamy Alfredo Pasta</h6>
-							<p class="text-muted small">Rich and creamy pasta with mushrooms and herbs.</p>
-							<div class="price">₹299</div>
+							<h6 class="card-title">Bruschetta</h6>
+							<p class="small">Grilled bread topped with fresh tomatoes, garlic, olive oil & basil.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="card food-card">
-						<img src="/static/images/1-Home.png" class="card-img-top" alt="grill">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹149</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="Garlic Bread">
+						<div class="card-body">
+							<h6 class="card-title">Garlic Bread</h6>
+							<p class="small">Crispy garlic bread with herbs and a touch of olive oil.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹249</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="Caesar Salad">
+						<div class="card-body">
+							<h6 class="card-title">Classic Caesar Salad</h6>
+							<p class="small">Crisp romaine lettuce, parmesan, croutons & caesar dressing.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹249</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="Wings">
+						<div class="card-body">
+							<h6 class="card-title">Chicken Wings</h6>
+							<p class="small">Spicy chicken wings tossed in our signature sauce.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main Course -->
+			<div class="d-flex justify-content-between align-items-center mb-3">
+				<h4 class="section-heading">Main Course</h4>
+				<a class="btn btn-sm btn-outline-secondary" href="#">View All →</a>
+			</div>
+			<div class="row g-4 mb-4" data-cat="main">
+				<div class="col-md-3">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹349</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="Grilled Herb Chicken">
 						<div class="card-body">
 							<h6 class="card-title">Grilled Herb Chicken</h6>
-							<p class="text-muted small">Juicy grilled chicken with herb butter sauce.</p>
-							<div class="price">₹349</div>
+							<p class="small">Juicy grilled chicken with herb butter and seasonal veggies.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="card food-card">
-						<img src="/static/images/1-Home.png" class="card-img-top" alt="dessert">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹299</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="Paneer Masala">
 						<div class="card-body">
-							<h6 class="card-title">Chocolate Lava Cake</h6>
-							<p class="text-muted small">Warm chocolate cake with melted center.</p>
-							<div class="price">₹199</div>
+							<h6 class="card-title">Paneer Butter Masala</h6>
+							<p class="small">Cottage cheese cooked in rich buttery tomato gravy.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="card food-card">
-						<img src="/static/images/1-Home.png" class="card-img-top" alt="pizza">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹399</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="Fish & Chips">
 						<div class="card-body">
-							<h6 class="card-title">Farmhouse Pizza</h6>
-							<p class="text-muted small">Loaded with veggies, olives and mozzarella cheese.</p>
-							<div class="price">₹299</div>
+							<h6 class="card-title">Fish & Chips</h6>
+							<p class="small">Crispy fried fish served with fries and tartar sauce.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹499</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="BBQ Ribs">
+						<div class="card-body">
+							<h6 class="card-title">BBQ Pork Ribs</h6>
+							<p class="small">Slow-cooked pork ribs glazed with BBQ sauce.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="text-center mt-4">
-				<a class="btn btn-outline-secondary" href="#">View Full Menu</a>
+			<!-- Pasta -->
+			<div class="d-flex justify-content-between align-items-center mb-3">
+				<h4 class="section-heading">Pasta</h4>
+				<a class="btn btn-sm btn-outline-secondary" href="#">View All →</a>
+			</div>
+			<div class="row g-4 mb-4" data-cat="pasta">
+				<div class="col-md-3">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹299</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="Alfredo Pasta">
+						<div class="card-body">
+							<h6 class="card-title">Creamy Alfredo Pasta</h6>
+							<p class="small">Fettuccine pasta in a creamy alfredo sauce.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹279</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="Penne Arrabbiata">
+						<div class="card-body">
+							<h6 class="card-title">Penne Arrabbiata</h6>
+							<p class="small">Penne pasta in spicy tomato sauce with herbs.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹349</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="Pesto Pasta">
+						<div class="card-body">
+							<h6 class="card-title">Chicken Pesto Pasta</h6>
+							<p class="small">Pasta tossed in basil pesto sauce with grilled chicken.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card food-card position-relative">
+						<div class="food-badge">₹399</div>
+						<img src="/static/images/1-Home.png" class="card-img-top" alt="Seafood Marinara">
+						<div class="card-body">
+							<h6 class="card-title">Seafood Marinara</h6>
+							<p class="small">Pasta with mixed seafood in a classic marinara sauce.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Promo CTA bar -->
+		<section class="container mb-5">
+			<div class="cta d-flex justify-content-between align-items-center shadow-sm">
+				<div>
+					<h5 class="mb-1">Loved something on the menu?</h5>
+					<p class="mb-0 text-muted">Book your table now and enjoy a memorable dining experience.</p>
+				</div>
+				<div>
+					<a class="btn btn-lg" href="#book">Book a Table Now →</a>
+				</div>
 			</div>
 		</section>
 
