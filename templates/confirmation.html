@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Booking Confirmed — TableReady</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body class="confirmation-page">
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark topbar py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <div class="brand-icon">🍽️</div>
+                <div class="ms-2">
+                    <div class="brand-title">TableReady</div>
+                    <small class="text-muted brand-sub">Premium Dining Experience</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#menu">Restaurants</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#book">Reservations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My Bookings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item ms-3">
+                        <div class="d-flex align-items-center text-light">
+                            <i class="fas fa-user-circle me-2" style="font-size: 18px;"></i>
+                            <span>John Smith</span>
+                            <i class="fas fa-chevron-down ms-2" style="font-size: 12px;"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Success Section -->
+    <section class="confirmation-hero">
+        <div class="confirmation-bg"></div>
+        <div class="container position-relative z-1 py-5">
+            <!-- Success Checkmark Circle -->
+            <div class="text-center mb-4">
+                <div class="success-circle mx-auto mb-4">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h1 class="confirmation-title">
+                    Booking <span class="text-gold">Confirmed!</span>
+                </h1>
+                <p class="confirmation-subtitle mt-3">
+                    Thank you for choosing TableReady. Your table is all set and we look<br>
+                    forward to serving you an exceptional dining experience.
+                </p>
+            </div>
+
+            <!-- Booking Details Card -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="booking-details-card">
+                        <div class="card-header">
+                            <i class="fas fa-calendar-check"></i> YOUR BOOKING DETAILS
+                        </div>
+                        <div class="card-content">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <div class="detail-label">
+                                            <i class="fas fa-user"></i> CUSTOMER NAME
+                                        </div>
+                                        <div class="detail-value">John Smith</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <div class="detail-label">
+                                            <i class="fas fa-calendar-alt"></i> DATE
+                                        </div>
+                                        <div class="detail-value">Saturday, 24 May 2025</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <div class="detail-label">
+                                            <i class="fas fa-clock"></i> TIME
+                                        </div>
+                                        <div class="detail-value">7:30 PM</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <div class="detail-label">
+                                            <i class="fas fa-chair"></i> TABLE NUMBER
+                                        </div>
+                                        <div class="detail-value">Table 12</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="detail-item">
+                                        <div class="detail-label">
+                                            <i class="fas fa-users"></i> GUESTS
+                                        </div>
+                                        <div class="detail-value">4 Guests</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="booking-id-section">
+                                <label class="booking-id-label">Booking ID:</label>
+                                <div class="booking-id-container">
+                                    <span class="booking-id-value" id="bookingId">TRB-20250524-00125</span>
+                                    <button class="copy-btn" onclick="copyBookingId()" title="Copy Booking ID">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Journey Timeline -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <h5 class="journey-title text-center mb-4">
+                        <i class="fas fa-route"></i> YOUR BOOKING JOURNEY
+                    </h5>
+                    <div class="journey-timeline">
+                        <!-- Step 1 -->
+                        <div class="journey-step">
+                            <div class="step-dot completed">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="step-line"></div>
+                            <div class="step-content">
+                                <div class="step-title">Booking Created</div>
+                                <div class="step-time">24 May 2025, 10:15 AM</div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="journey-step">
+                            <div class="step-dot completed">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="step-line"></div>
+                            <div class="step-content">
+                                <div class="step-title">Payment Confirmed</div>
+                                <div class="step-time">24 May 2025, 10:16 AM</div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="journey-step">
+                            <div class="step-dot active">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="step-line"></div>
+                            <div class="step-content">
+                                <div class="step-title">Booking Confirmed</div>
+                                <div class="step-time">24 May 2025, 10:16 AM</div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="journey-step">
+                            <div class="step-dot">
+                                <i class="fas fa-door-open"></i>
+                            </div>
+                            <div class="step-content">
+                                <div class="step-title">Ready to Welcome You!</div>
+                                <div class="step-time">24 May 2025, 7:30 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="action-buttons">
+                        <button class="btn btn-action btn-view-booking">
+                            <i class="fas fa-file-alt"></i> View Booking
+                        </button>
+                        <button class="btn btn-action btn-book-another">
+                            <i class="fas fa-plus-circle"></i> Book Another Table
+                        </button>
+                        <button class="btn btn-action btn-home" onclick="window.location.href='/'">
+                            <i class="fas fa-home"></i> Back to Home
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Support Section -->
+    <section class="confirmation-footer">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-md-3 d-flex align-items-center">
+                    <div class="support-item">
+                        <i class="fas fa-headset"></i>
+                        <div>
+                            <div class="support-label">Need Help?</div>
+                            <div class="support-value">+1 (555) 123-4567</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-center">
+                    <div class="support-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <div class="support-label">Email Us</div>
+                            <div class="support-value">support@tableready.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-center">
+                    <div class="support-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <div class="support-label">Restaurant Timings</div>
+                            <div class="support-value">11:00 AM - 11:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-center">
+                    <div class="support-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <div class="support-label">Restaurant Address</div>
+                            <div class="support-value">123 Gourmet Street, Culinary City, CC 12345</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="/static/js/confirmation.js"></script>
+</body>
+
+</html>
